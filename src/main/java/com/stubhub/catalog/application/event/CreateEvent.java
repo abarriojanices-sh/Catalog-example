@@ -1,4 +1,4 @@
-package com.stubhub.catalog.application;
+package com.stubhub.catalog.application.event;
 
 import com.stubhub.catalog.domain.model.Date;
 import com.stubhub.catalog.domain.model.event.EventRepository;

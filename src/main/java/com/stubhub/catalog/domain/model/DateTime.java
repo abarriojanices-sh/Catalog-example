@@ -72,6 +72,10 @@ public final class DateTime implements Serializable {
         return new DateTime(instant.plus(days, DAYS));
     }
 
+    public DateTime minusDays(int days) {
+        return new DateTime(instant.minus(days, DAYS));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -97,6 +101,4 @@ public final class DateTime implements Serializable {
     private LocalDateTime getLocalDateTime() {
         return LocalDateTime.ofInstant(instant, UTC);
     }
-
-
 }

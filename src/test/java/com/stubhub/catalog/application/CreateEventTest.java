@@ -1,5 +1,6 @@
 package com.stubhub.catalog.application;
 
+import com.stubhub.catalog.application.event.CreateEvent;
 import com.stubhub.catalog.domain.model.Date;
 import com.stubhub.catalog.domain.model.DateTime;
 import com.stubhub.catalog.domain.model.event.EventRepository;

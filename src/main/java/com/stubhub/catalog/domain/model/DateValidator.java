@@ -7,10 +7,14 @@ public class DateValidator {
         this.clock = clock;
     }
 
-    public void validate(Date date) {
-        DateTime actualDate = date.get();
-        if (actualDate.isBefore(clock.now())) {
-            throw new DateCannotBeFuture(date);
+    public void validate(DateTime dateTime, String fieldName) {
+        if (dateTime.isBefore(clock.now())) {
+            throw new DateIsNotFuture(dateTime) {
+                @Override
+                public String fieldName() {
+                    return fieldName;
+                }
+            };
         }
     }
 }
